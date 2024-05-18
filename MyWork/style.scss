@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+// メディアクエリ設定
+@mixin media ($width-media: 600px) {
+    @media screen and (max-width: $width-media) {
+        @content;
+    }
+}
+
+// basic
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:  14.4px;
+    color: #24292E;
+    text-align: center;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color:#24292E;
+    transition: all .3s ease;
+    &:hover {
+        opacity: 0.6;
+        transition: all .3s ease;
+        text-decoration: underline;
+    }
+}
+img {
+    width: 100%;
+    vertical-align:bottom;
+}
+ul {
+    list-style: none;
+}
+
+.header {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 120px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media {
+        width: 100%;
+        padding: 20px 0 8px;
+        display: block;
+    }
+    &__title {
+        width: 120px;
+        @include media {
+            margin: 0 auto 7px;
+        }
+    }
+}
+.menu__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    text-decoration: none;
+    @include media {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+// instagramアイコン
+.instagram {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.main-visual {
+    &__image {
+        width: 100%;
+        max-width: 1920px;
+        height: 420px;
+        object-fit: cover;
+    }
+    @include media {
+        margin-bottom: 40px;
+    }
+}
+
+.section {
+    max-width: 960px;
+    margin: 0 auto 40px;
+    padding: 80px 4% 10px;
+    &__title{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 65px;
+        @include media {
+            margin-bottom: 40px;
+        }
+    }
+    @include media {
+        width: 100%;
+        padding: 40px 4% 0;
+        margin-bottom: 40px;
+    }
+    &:last-child {
+        margin-bottom: 120px;
+        @include media {
+            margin-bottom: 70px;
+        }
+    }
+}
+
+.about {
+    &__inner {
+        &__text {
+            text-align: left;
+            line-height: 16px;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @include media {
+            padding: 10px;
+        }
+    }
+}
+
+.works {
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, 264px);
+        gap: 24px;
+        padding-bottom: 20px;
+        @include media {
+            display: block;
+            padding-bottom: 10px;
+        }
+        &__photo {
+            @include media {
+                margin-bottom: 23px;
+            }
+        }
+        &__photo:last-child {
+            @include media {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.news {
+    &__list-item {
+        display: flex;
+        gap: 83px;
+        padding: 13px 0;
+        border-top: 1px solid #C8C8C8;
+        &:last-child {
+            border-bottom: 1px solid #C8C8C8;
+        }
+        &__date {
+            padding-left: 1em;
+        }
+        &__text {
+            @include media {
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+            
+        }
+        @include media {
+            display: block;
+            text-align: left;
+        }
+        
+    }
+}
+// インデント個別調整
+.indent-left {
+    text-indent: -0.5em; 
+}
+
+.contact {
+    &__form {
+        &__label {
+            display: inline-block;
+            width: 14%;
+            text-align: left;
+            vertical-align: top;
+            @include media {
+                width: 100%;
+            }
+        }
+        &__text {
+            display: inline-block;
+            width: 85%;
+            height: 44px;
+            border: 1px solid #C8C8C8;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            @include media {
+                width: 100%;
+            }
+        }
+        &__textarea {
+            width: 85%;
+            height: 160px;
+            border: 1px solid #C8C8C8;
+            padding: 10px;
+            resize: none;
+            margin-bottom: 30px;
+            @include media {
+                width: 100%;
+            }
+        }
+        &__submit {
+            width: 200px;
+            height: 45px;
+            color: #fff;
+            background-color: #24292E;
+            border: 1px solid #24292E;
+            transition: all .2s ease;
+            &:hover {
+                color: #24292E;
+                background-color: #fff;
+                transition: all .2s ease;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: #24292E;
+    text-align: center;
+    &__content {
+        color: #fff;
+        font-size: 11px;
+        padding: 10px 0;
+    }
+}
+
+// pc・sp表示切替
+.pc-hidden {
+    display: none;
+    @include media {
+        display: block;
+    }
+}
+.sp-hidden {
+    display: block;
+    @include media {
+        display: none;
+    }
+}

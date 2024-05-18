@@ -1,0 +1,259 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14.4px;
+  color: #24292E;
+  text-align: center;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #24292E;
+  transition: all 0.3s ease;
+}
+a:hover {
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 120px 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .header {
+    width: 100%;
+    padding: 20px 0 8px;
+    display: block;
+  }
+}
+.header__title {
+  width: 120px;
+}
+@media screen and (max-width: 600px) {
+  .header__title {
+    margin: 0 auto 7px;
+  }
+}
+
+.menu__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .menu__list {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+.instagram {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.main-visual__image {
+  width: 100%;
+  max-width: 1920px;
+  height: 420px;
+  object-fit: cover;
+}
+@media screen and (max-width: 600px) {
+  .main-visual {
+    margin-bottom: 40px;
+  }
+}
+
+.section {
+  max-width: 960px;
+  margin: 0 auto 40px;
+  padding: 80px 4% 10px;
+}
+.section__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 65px;
+}
+@media screen and (max-width: 600px) {
+  .section__title {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section {
+    width: 100%;
+    padding: 40px 4% 0;
+    margin-bottom: 40px;
+  }
+}
+.section:last-child {
+  margin-bottom: 120px;
+}
+@media screen and (max-width: 600px) {
+  .section:last-child {
+    margin-bottom: 70px;
+  }
+}
+
+.about__inner__text {
+  text-align: left;
+  line-height: 16px;
+  margin-bottom: 30px;
+}
+.about__inner__text:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 600px) {
+  .about__inner {
+    padding: 10px;
+  }
+}
+
+.works__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 264px);
+  gap: 24px;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 600px) {
+  .works__inner {
+    display: block;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .works__inner__photo {
+    margin-bottom: 23px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .works__inner__photo:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.news__list-item {
+  display: flex;
+  gap: 83px;
+  padding: 13px 0;
+  border-top: 1px solid #C8C8C8;
+}
+.news__list-item:last-child {
+  border-bottom: 1px solid #C8C8C8;
+}
+.news__list-item__date {
+  padding-left: 1em;
+}
+@media screen and (max-width: 600px) {
+  .news__list-item__text {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .news__list-item {
+    display: block;
+    text-align: left;
+  }
+}
+
+.indent-left {
+  text-indent: -0.5em;
+}
+
+.contact__form__label {
+  display: inline-block;
+  width: 14%;
+  text-align: left;
+  vertical-align: top;
+}
+@media screen and (max-width: 600px) {
+  .contact__form__label {
+    width: 100%;
+  }
+}
+.contact__form__text {
+  display: inline-block;
+  width: 85%;
+  height: 44px;
+  border: 1px solid #C8C8C8;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 600px) {
+  .contact__form__text {
+    width: 100%;
+  }
+}
+.contact__form__textarea {
+  width: 85%;
+  height: 160px;
+  border: 1px solid #C8C8C8;
+  padding: 10px;
+  resize: none;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 600px) {
+  .contact__form__textarea {
+    width: 100%;
+  }
+}
+.contact__form__submit {
+  width: 200px;
+  height: 45px;
+  color: #fff;
+  background-color: #24292E;
+  border: 1px solid #24292E;
+  transition: all 0.2s ease;
+}
+.contact__form__submit:hover {
+  color: #24292E;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.footer {
+  background-color: #24292E;
+  text-align: center;
+}
+.footer__content {
+  color: #fff;
+  font-size: 11px;
+  padding: 10px 0;
+}
+
+.pc-hidden {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .pc-hidden {
+    display: block;
+  }
+}
+
+.sp-hidden {
+  display: block;
+}
+@media screen and (max-width: 600px) {
+  .sp-hidden {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
