@@ -1,0 +1,398 @@
+@charset "UTF-8";
+
+// メディアクエリ設定
+@mixin media ($width-media: 900px) {
+    @media screen and (max-width: $width-media) {
+        @content;
+    }
+}
+
+//section共通設定
+@mixin section-title {
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    margin-bottom: 7px;
+}
+@mixin section-subtitle {
+    font-size: 14px;
+    margin-bottom: 34px;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 1px;
+        left: 0;
+        bottom: -34px;
+        background-color: #000;
+    }
+    @include media {
+        margin-bottom: 22px;
+        &::after {
+            bottom: -22px;
+        }
+    }
+}
+
+// common
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    background-color: #F0F0F0;
+    position: relative;
+}
+a {
+    color:#000;
+    display: block;
+    text-decoration: none;
+    transition: all .2s ease;
+    &:hover {
+        opacity: 0.6;
+        transition: all .2s ease;
+    }
+}
+img {
+    width: 100%;
+    vertical-align:bottom;
+}
+ul {
+    list-style: none;
+}
+
+// ヘッダー
+.header {
+    width: 100%;
+    height: 80px;
+    padding-left: 6%;
+    @include media {
+        padding: 10px 18px 0;
+    }
+    &__inner {
+        height: 100%;
+        display: flex;
+        gap: 60px;
+        align-items: center;
+        @include media {
+            display: block;
+        }
+    }
+    &__title {
+        width: 100px;
+        @include media {
+            width: 80px;
+            margin-bottom: 8px;
+        }
+    }
+    &__menu {
+        display: flex;
+        gap: 30px;
+        &__list {
+            font-size: 14px;
+        }
+    }
+}
+// お問い合わせボタン
+.contact {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 80px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #000;
+    transition: all .1s ease;
+    @include media {
+        display: none;
+    }
+    &:hover {
+        opacity: 0.7;
+        transition: all .1s ease;
+    }
+}
+
+// メインビジュアル
+.main-visual {
+    margin-bottom: 120px;
+    &__image {
+        width: 100%;
+        height: calc(100vh - 80px);
+        object-fit: cover;
+    }
+}
+
+// section共通
+.section {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+    &:last-child {
+        margin-bottom: 185px;
+        @include media {
+            margin-bottom: 0;
+        }
+    }
+    @include media {
+        width: 100%;
+        padding: 0 4%;
+        margin-bottom: 80px;
+    }
+    &__title {
+        @include section-title;
+    }
+    &__title--subtitle {
+        @include section-subtitle;
+    }
+}
+.news {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+        @include media {
+            display: block;
+            padding-top: 44px;
+        }
+    }
+    &__list {
+        padding: 10px 20px 13px;
+        border-left: 1px solid #000;
+        &:first-child {
+            padding-left: 0;
+            border-left: none;
+        }
+        &__date {
+            display: inline-block;
+            margin-bottom: 13px;
+        }
+        &__text {
+            font-size: 16px;
+        }
+        @include media {
+            border: none;
+            padding: 0;
+            margin-bottom: 38px;
+            &:last-child {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+// タグ
+//共通設定
+@mixin tag-position {
+    position: relative;
+        &::after {
+            position: absolute;
+            top: -2px;
+            right: -70px;
+            width: 50px;
+            height: 20px;
+            font-size: 12px;
+            color: #fff;
+            background-color: #000;
+        }
+}
+.tag {
+    &--news {
+        @include tag-position;
+        &::after {
+            padding: 3px 7px;
+            content: "NEWS";
+        }
+    }
+    &--press {
+        @include tag-position;
+        &::after {
+            padding: 3px 4px;
+            content: "PRESS";
+        }
+    }
+}
+
+.about {
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 70px;
+    @include media {
+        margin-bottom: 80px;
+        display: block;
+    }
+    &__image {
+        width: 55%;
+        img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        @include media {
+            width: 100%;
+        }
+    }
+    &__wrapper {
+        padding-top: 180px;
+        width: 35%;
+        @include media {
+            width: 100%;
+            padding: 30px 4% 0;
+        }
+    }
+    &__title {
+        @include section-title;
+    }
+    &__title--subtitle {
+        @include section-subtitle;
+    }
+    &__inner {
+        padding-top: 48px;
+        line-height: 30.8px;
+        @include media {
+            padding-top: 32px;
+        }
+    }
+}
+
+.business {
+    &__inner {
+        padding-top: 47px;
+        display: flex;
+        justify-content: center;
+        gap:64px;
+        @include media {
+            display: block;
+            padding-top: 32px;
+        }
+    }
+}
+.business-info {
+    &:first-child {
+        padding-top: 90px;
+        @include media {
+            padding-top: 0;
+        }
+    }
+    &__container{
+        &:nth-of-type(1) {
+        margin-bottom: 47px;
+        @include media {
+            margin-bottom: 27px;
+        }
+        }
+        @include media {
+            margin-bottom: 27px;
+        }
+    }
+    &__title {
+        margin-bottom: 9px;
+        padding-left: 20px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 0px;
+            width: 8px;
+            height: 1px;
+            background-color: #000;
+        }
+    }
+    &__photo {
+        width: 368px;
+        @include media {
+            width: 100%;
+        }
+    }
+}
+
+.company {
+    position: relative;
+    &__wrapper {
+        width: 55%;
+        background-color: #fff;
+        padding: 100px 60px;
+        @include media {
+            width: 100%;
+            height: auto;
+            padding: 40px 20px 20px;
+            margin-bottom: 20px;
+        }
+    }
+    &__inner {
+        padding-top: 47px;
+        @include media {
+            padding-top: 31px;
+        }
+    }
+    &__photo {
+        position: absolute;
+        content: "";
+        top: 81px;
+        right: -5px;
+        width: 53%;
+        img {
+            max-width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        @include media {
+            position: static;
+            width: 100%;
+        }
+    }
+}
+.company-info {
+    display: flex;
+    margin-bottom: 6px;
+    @include media {
+        display: block;
+        margin-bottom: 15px;
+    }
+    &__name {
+        width: 70px;
+    }
+    &__content {
+        padding-left: 14px;
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: #fff;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    @include media {
+        padding: 48px 16px 20px;
+    }
+    &__inner {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        @include media {
+            display: block;
+        }
+        &__logo {
+            width: 100px;
+            @include media {
+                width: 80px;
+                padding-bottom: 8px;
+            }
+        }
+        &__info {
+            line-height: 21px;
+            @include media {
+                padding-bottom: 40px;
+            }
+        }
+    }
+    &__copy {
+        font-size: 12px;
+    }
+}
