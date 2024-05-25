@@ -1,0 +1,156 @@
+@use "mixin";
+
+// ロゴ
+.logo {
+	width: 40px;
+	&:hover a {
+		opacity: 1;
+	}
+}
+
+// ヘッダー
+.header {
+	background: url("../img/mainvisual-pc.jpg");
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	@include mixin.media {
+		background: url("../img/mainvisual-sp.jpg");
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+	}
+	&-inner {
+		color: #fff;
+	}
+}
+.nav {
+	writing-mode: vertical-rl;
+	color: #fff;
+	&-list {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 25px;
+	}	
+}
+.button-onlinestore {
+	writing-mode: vertical-rl;
+	width: 68px;
+	height: 252px;
+	background-color: rgba(255, 255, 255, 0.2);
+	transition: all .2s ease;
+	&:hover {
+		opacity: 1;
+		background-color: rgba(255, 255, 255, 0.3);
+		transition: all .2s ease;
+	}	
+}
+
+// メインカラム
+.section {
+	&-title {
+		font-size: 36px;
+		font-weight: 400;
+		writing-mode: vertical-rl;
+		@include mixin.media {
+			font-size: 24px;
+		}
+	}
+	&-subtitle {
+		font-size: 13px;
+		letter-spacing: .1rem;
+		@include mixin.media {
+			display: none;
+		}
+	}
+}
+.news {
+	writing-mode: vertical-rl;
+	margin-left: auto;
+	margin-right:  0;
+	&-title {
+		margin-right: 25px;
+		position: relative;
+	}
+	&-subtitle {
+		position: absolute;
+		top: -10px;
+		right: -30px;
+		@include mixin.media {
+			display: block;
+		}
+	}
+	&-list {
+		border-right: 1px solid #000;
+		&-item {
+			padding: 13px 30px;
+			border-left: 1px solid #000;
+			@include mixin.media {
+				padding: 10px 12px;
+			}
+		}
+		&-date {
+			font-size: 13px;
+		}
+	}
+}
+.products {
+	@include mixin.media {
+		&-text {
+			font-size: 14px;
+		}
+	}
+}
+.flame-yellow {
+	color: #fff;
+	background-color: rgba(249, 233, 6, .6);
+}
+.flame-brown {
+	color: #fff;
+	background-color: rgb(149, 42, 38, .6);
+}
+
+// フッター
+.footer {
+	background-color: #000;
+	color:#fff;
+	&-info p {
+		writing-mode: vertical-rl;
+		font-size: 14px;
+		letter-spacing: -0.1rem;
+	}
+	&-link {
+		writing-mode: vertical-rl;
+		position: relative;
+		a {
+			&:first-child{		
+				margin-bottom: 20px;
+			}
+		}
+		&::after {
+			position: absolute;
+			content: "";
+			left: 4px;
+			bottom: 49%;
+			width: 16px;
+			height: 1px;
+			background-color: #fff;
+			@include mixin.media {
+				left: 2px;
+				bottom: 55%;
+			}
+		}
+	}
+	@include mixin.media {
+		.nav-list {
+			font-size: 14px;
+			gap: 10px;
+		}
+	}
+}
+
+.copy {
+	font-size: 10px;
+	text-align: center;
+}

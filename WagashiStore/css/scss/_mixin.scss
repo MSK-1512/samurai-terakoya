@@ -1,0 +1,12 @@
+// メディアクエリ
+@mixin media ($width-media: 768px) {
+    @media screen and (max-width: $width-media) {
+        @content;
+    }
+}
+
+// 縦書き用右→左レイアウト
+@mixin flex-rl {
+    display: flex;
+	flex-direction: row-reverse;
+}

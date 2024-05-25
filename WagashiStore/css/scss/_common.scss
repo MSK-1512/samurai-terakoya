@@ -1,0 +1,33 @@
+html, body {
+	font-family: "Noto Serif JP", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+body {
+	background-color: #E6E2D7;
+}
+ul {
+	list-style: none;
+}
+img {
+	width: 100%;
+	vertical-align: bottom;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	transition: all .2s ease;
+}
+a:hover, a:link, a:visited {
+	text-decoration: none;
+}
+a:hover {
+	opacity: .6;
+	transition: all .2s ease;
+	}
+iframe {
+	width: 100%;
+	vertical-align: bottom;
+	}

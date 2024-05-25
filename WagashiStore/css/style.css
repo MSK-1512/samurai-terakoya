@@ -1,0 +1,379 @@
+html, body {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #E6E2D7;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+a:hover, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+
+iframe {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  padding: 60px 5% 30px 3%;
+  position: relative;
+}
+.header-inner {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 60px;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 5%;
+  }
+}
+
+.button-onlinestore {
+  display: block;
+  position: absolute;
+  left: 40px;
+  bottom: 30px;
+  padding: 35px 23px 35px 25px;
+}
+.button-onlinestore::after {
+  position: absolute;
+  border: 1px solid #ccc;
+  content: "";
+  top: 8px;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+}
+@media screen and (max-width: 768px) {
+  .button-onlinestore {
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+.main {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .main {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 5%;
+  }
+}
+
+.section {
+  margin-top: 170px;
+  padding: 0 20px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .section {
+    margin-top: 75px;
+    padding: 0;
+  }
+}
+.section:last-child {
+  margin-bottom: 160px;
+}
+@media screen and (max-width: 768px) {
+  .section:last-child {
+    margin-bottom: 80px;
+  }
+}
+.section-subtitle {
+  display: inline-block;
+  margin-top: 13px;
+}
+
+.news-list {
+  margin-top: 90px;
+  margin-right: 100px;
+}
+@media screen and (max-width: 768px) {
+  .news-list {
+    margin-right: 30px;
+  }
+  .news-list li:nth-child(n+4) {
+    display: none;
+  }
+}
+
+.products {
+  width: 100%;
+}
+.products-container {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+.products-container:last-child {
+  flex-direction: row;
+  margin-top: 170px;
+}
+@media screen and (max-width: 768px) {
+  .products-container:last-child {
+    margin-top: 95px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .products-container {
+    gap: 10px;
+  }
+}
+.products-inner {
+  margin-top: 100px;
+  width: 65%;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .products-inner {
+    width: 100%;
+    margin-top: 75px;
+  }
+}
+.products-text {
+  position: absolute;
+  content: "";
+  width: 56%;
+  padding: 50px 0;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .products-text {
+    padding: 25px 0;
+  }
+}
+
+.flame-yellow {
+  left: -20px;
+  bottom: -20px;
+}
+
+.flame-brown {
+  right: -20px;
+  bottom: -20px;
+}
+
+.footer {
+  width: 100%;
+  padding: 80px 5% 30px 3%;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 40px 5% 30px;
+  }
+}
+.footer-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.footer-info {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 60px;
+}
+@media screen and (max-width: 768px) {
+  .footer-info {
+    gap: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer-link {
+    font-size: 14px;
+  }
+}
+
+.logo {
+  width: 40px;
+}
+.logo:hover a {
+  opacity: 1;
+}
+
+.header {
+  background: url("../img/mainvisual-pc.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    background: url("../img/mainvisual-sp.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+}
+.header-inner {
+  color: #fff;
+}
+
+.nav {
+  writing-mode: vertical-rl;
+  color: #fff;
+}
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.button-onlinestore {
+  writing-mode: vertical-rl;
+  width: 68px;
+  height: 252px;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+.button-onlinestore:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 400;
+  writing-mode: vertical-rl;
+}
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 24px;
+  }
+}
+.section-subtitle {
+  font-size: 13px;
+  letter-spacing: 0.1rem;
+}
+@media screen and (max-width: 768px) {
+  .section-subtitle {
+    display: none;
+  }
+}
+
+.news {
+  writing-mode: vertical-rl;
+  margin-left: auto;
+  margin-right: 0;
+}
+.news-title {
+  margin-right: 25px;
+  position: relative;
+}
+.news-subtitle {
+  position: absolute;
+  top: -10px;
+  right: -30px;
+}
+@media screen and (max-width: 768px) {
+  .news-subtitle {
+    display: block;
+  }
+}
+.news-list {
+  border-right: 1px solid #000;
+}
+.news-list-item {
+  padding: 13px 30px;
+  border-left: 1px solid #000;
+}
+@media screen and (max-width: 768px) {
+  .news-list-item {
+    padding: 10px 12px;
+  }
+}
+.news-list-date {
+  font-size: 13px;
+}
+
+@media screen and (max-width: 768px) {
+  .products-text {
+    font-size: 14px;
+  }
+}
+
+.flame-yellow {
+  color: #fff;
+  background-color: rgba(249, 233, 6, 0.6);
+}
+
+.flame-brown {
+  color: #fff;
+  background-color: rgba(149, 42, 38, 0.6);
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+}
+.footer-info p {
+  writing-mode: vertical-rl;
+  font-size: 14px;
+  letter-spacing: -0.1rem;
+}
+.footer-link {
+  writing-mode: vertical-rl;
+  position: relative;
+}
+.footer-link a:first-child {
+  margin-bottom: 20px;
+}
+.footer-link::after {
+  position: absolute;
+  content: "";
+  left: 4px;
+  bottom: 49%;
+  width: 16px;
+  height: 1px;
+  background-color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .footer-link::after {
+    left: 2px;
+    bottom: 55%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer .nav-list {
+    font-size: 14px;
+    gap: 10px;
+  }
+}
+
+.copy {
+  font-size: 10px;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

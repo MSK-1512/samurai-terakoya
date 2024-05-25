@@ -1,0 +1,148 @@
+@use "mixin";
+
+// ヘッダー
+.header {
+	width: 100%;
+	height: 100vh;
+	padding: 60px 5% 30px 3%;
+	position: relative;
+	&-inner {
+    @include mixin.flex-rl;
+	gap: 60px;
+	}
+	@include mixin.media {
+		padding: 5%;
+	}
+}
+.button-onlinestore {
+	display: block;
+	position: absolute;
+	left: 40px;
+	bottom: 30px;
+	padding: 35px 23px 35px 25px;
+	&::after {
+		position: absolute;
+		border: 1px solid #ccc;
+		content: "";
+		top: 8px;
+		bottom: 8px;
+		left: 8px;
+		right: 8px;
+	}
+	@include mixin.media {
+		left: 20px;
+		bottom: 20px;
+	}
+}
+
+// メインカラム
+.main {
+	max-width: 1024px;
+	margin: 0 auto;
+	@include mixin.media {
+		max-width: 100%;
+		margin: 0;
+		padding: 0 5%;
+	}
+}
+.section {
+	margin-top: 170px;
+	padding: 0 20px;
+	position: relative;
+	@include mixin.media {
+		margin-top: 75px;
+		padding: 0;
+	}
+	&:last-child {
+		margin-bottom: 160px;
+		@include mixin.media {
+			margin-bottom: 80px;
+		}
+	}
+	&-subtitle {
+		display: inline-block;
+		margin-top: 13px;
+	}
+}
+.news {
+	&-list {
+		margin-top: 90px;
+		margin-right: 100px;
+		@include mixin.media {
+			margin-right: 30px;
+			li:nth-child(n+4) {
+				display: none;
+			}
+		}
+	}
+}
+.products {
+	width: 100%;
+	&-container {
+		@include mixin.flex-rl;
+		gap:20px;
+		&:last-child {
+			flex-direction: row;
+			margin-top: 170px;
+			@include mixin.media {
+				margin-top: 95px;
+			}
+		}
+		@include mixin.media {
+			gap:10px;
+		}
+	}
+	&-inner {
+		margin-top: 100px;	
+		width: 65%;
+		position: relative;
+		@include mixin.media {
+			width: 100%;
+			margin-top: 75px;	
+		}
+	}
+	&-text {
+		position: absolute;
+		content: "";
+		width: 56%;
+		padding: 50px 0;
+		text-align: center;
+		@include mixin.media {
+			padding: 25px 0;
+		}
+	}
+}
+.flame-yellow {
+	left: -20px;
+	bottom: -20px;
+}
+.flame-brown {
+	right: -20px;
+	bottom: -20px;
+}
+
+// フッター
+.footer {
+	width: 100%;
+	padding: 80px 5% 30px 3%;
+	@include mixin.media {
+		padding: 40px 5% 30px;
+	}
+	&-container {
+		@include mixin.flex-rl;
+		justify-content: space-between;
+		margin-bottom: 8px;
+	}
+	&-info {
+		@include mixin.flex-rl;
+		gap: 60px;
+		@include mixin.media {
+			gap: 25px;
+		}
+	}
+	&-link {
+		@include mixin.media {
+			font-size: 14px;
+		}
+	}
+}
