@@ -209,11 +209,6 @@ iframe {
     gap: 25px;
   }
 }
-@media screen and (max-width: 768px) {
-  .footer-link {
-    font-size: 14px;
-  }
-}
 
 .logo {
   width: 40px;
@@ -347,6 +342,11 @@ iframe {
 .footer-link {
   writing-mode: vertical-rl;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .footer-link {
+    font-size: 14px;
+  }
 }
 .footer-link a:first-child {
   margin-bottom: 20px;

@@ -123,6 +123,9 @@
 	&-link {
 		writing-mode: vertical-rl;
 		position: relative;
+		@include mixin.media {
+			font-size: 14px;
+		}
 		a {
 			&:first-child{		
 				margin-bottom: 20px;
